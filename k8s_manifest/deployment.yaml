@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: check-my-ip
+spec:
+  selector:
+    matchLabels:
+      app: check-my-ip
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: check-my-ip
+    spec:
+      containers:
+      - name: check-my-ip
+        image: asia.gcr.io/serverless-demo-219814/check_my_ip:v1
+        ports:
+        - containerPort: 8080
