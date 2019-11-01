@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: check-my-ip
-        image: asia.gcr.io/serverless-demo-219814/check_my_ip:v1
+        image: asia.gcr.io/gck-mgr/check_my_ip:v1
         ports:
         - containerPort: 8080
